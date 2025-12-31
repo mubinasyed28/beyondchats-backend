@@ -6,11 +6,20 @@ const scrapeOldestArticles = require("./services/scraper");
 
 const app = express();
 
-connectDB();
-
+/* ✅ MIDDLEWARE MUST COME FIRST */
 app.use(cors());
 app.use(express.json());
 
+/* ✅ TEST ROUTE */
+app.post("/ping", (req, res) => {
+  console.log("🏓 Ping hit");
+  res.json({ message: "pong" });
+});
+
+/* ✅ DB */
+connectDB();
+
+console.log("🚦 Mounting article routes");
 app.use("/api/articles", require("./routes/articleRoutes"));
 
 app.get("/scrape", async (req, res) => {

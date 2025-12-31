@@ -6,6 +6,8 @@ const articleSchema = new mongoose.Schema({
   content: { type: String },
   publishedAt: { type: Date },
   sourceUrl: { type: String, unique: true },
+  updatedContent: { type: String },
+  references: [{ title: String, url: String }],
   isUpdated: { type: Boolean, default: false }
 }, { timestamps: true });
 

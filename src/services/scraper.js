@@ -45,21 +45,19 @@ const scrapeOldestArticles = async () => {
       continue;
     }
 
-    await Article.create({
-      title,
-      content,
-      sourceUrl: link
-    });
-
     await Article.updateOne(
-  { sourceUrl: link },
-  { title, content },
-  { upsert: true });
-
-    console.log("✅ Saved:", title);
-  }
+    { sourceUrl: link },
+    {
+        $set: {
+        title,
+        content,
+        sourceUrl: link
+        }
+    },
+    { upsert: true });
 
   console.log("🎉 Scraping completed");
+};
 };
 
 module.exports = scrapeOldestArticles;
