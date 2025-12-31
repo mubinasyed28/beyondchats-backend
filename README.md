@@ -106,6 +106,32 @@ Phase 3 is a separate frontend project built using **Vercel v0** for rapid UI pr
 
 ---
 
+## 🖼️ Screenshots
+
+### 📊 Database (MongoDB)
+
+<img width="941" height="414" alt="image" src="https://github.com/user-attachments/assets/9a90c6c7-5f7d-48fb-ba6f-734dfef0c32c" />
+
+<img width="818" height="300" alt="image" src="https://github.com/user-attachments/assets/90c8a742-5dac-4022-b81e-e11230979817" />
+
+
+---
+
+### 🌐 Web Application (Phase 3 UI)
+
+<img width="1353" height="605" alt="image" src="https://github.com/user-attachments/assets/e58ec36c-94d9-4c24-91eb-77e499025901" />
+
+
+---
+
+### 🏗️ System Architecture Diagram
+
+> *Diagram showing how scraping, AI enhancement, database, backend APIs, and frontend UI are connected.*
+
+<img width="2841" height="1144" alt="image" src="https://github.com/user-attachments/assets/2bf6a46e-023f-48a0-9888-705d5b3a4a57" />
+
+---
+
 ## 📌 How to Run Backend Locally
 
 ```bash
